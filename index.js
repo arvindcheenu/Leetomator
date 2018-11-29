@@ -2,9 +2,10 @@ const { Composer, Extra } = require('micro-bot')
 const bot = new Composer()
 
 bot.start((ctx) => {
-    ctx.reply("Hello, " + ctx.message.from.first_name + "!\n\n" +
+    ctx.replyWithHtml("Hello, " + ctx.message.from.first_name + "!\n\n" +
         "I'm Leetomator, an Automator who'll help you speak the language of the Eleet.\n" +
-        "Just type @leetspeak_bot inline, and let me handle the rest.")
+        "Just type @leetspeak_bot inline, and let me handle the rest.\n\n <i>Shall. We. <b>Begin?</b></i>")
+    ctx.replyWithSticker('CAADAgADbAIAApzW5woYlt5rV_hKIgI');
 })
 
 bot.on('inline_query', (ctx) => {
@@ -16,6 +17,7 @@ bot.on('inline_query', (ctx) => {
                 text: "Easy Mode",
                 title: "Easy Mode",
                 description: convertToLeet("easy", text).trim(),
+                thumb_url: "http://i68.tinypic.com/hwc1a0.png",
                 input_message_content: {
                     message_text: convertToLeet("easy", text).trim(),
                     parse_mode: 'Markdown'
@@ -27,6 +29,7 @@ bot.on('inline_query', (ctx) => {
                 text: "Normal Mode",
                 title: "Normal Mode",
                 description: convertToLeet("normal", text).trim(),
+                thumb_url: "http://i67.tinypic.com/a0ao1j.png",
                 input_message_content: {
                     message_text: convertToLeet("normal", text).trim(),
                     parse_mode: 'Markdown'
@@ -38,6 +41,7 @@ bot.on('inline_query', (ctx) => {
                 text: "Hard Mode",
                 title: "Hard Mode",
                 description: convertToLeet("hard", text).trim(),
+                thumb_url: "http://i68.tinypic.com/291jern.png",
                 input_message_content: {
                     message_text: convertToLeet("hard", text).trim(),
                     parse_mode: 'Markdown'
@@ -49,6 +53,7 @@ bot.on('inline_query', (ctx) => {
                 text: "Insane Mode",
                 title: "Insane Mode",
                 description: convertToLeet("insane", text).trim(),
+                thumb_url: "http://i65.tinypic.com/33fdnch.png",
                 input_message_content: {
                     message_text: convertToLeet("insane", text).trim(),
                     parse_mode: 'Markdown'
