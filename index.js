@@ -2,7 +2,7 @@ const { Composer, Extra } = require('micro-bot')
 const bot = new Composer()
 
 bot.start((ctx) => {
-    ctx.replyWithHtml("Hello, " + ctx.message.from.first_name + "!\n\n" +
+    ctx.replyWithHTML("Hello, " + ctx.message.from.first_name + "!\n\n" +
         "I'm Leetomator, an Automator who'll help you speak the language of the Eleet.\n" +
         "Just type @leetspeak_bot inline, and let me handle the rest.\n\n <i>Shall. We. <b>Begin?</b></i>")
     ctx.replyWithSticker('CAADAgADbAIAApzW5woYlt5rV_hKIgI');
