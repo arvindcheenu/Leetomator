@@ -1,0 +1,17 @@
+{
+    "name": "Leetomator",
+    "version": "1.0.0",
+    "description": "Speak the Language of Eleet.",
+    "main": "index.js",
+    "scripts": {
+        "start": "micro-bot -t 735077022:AAEh7bwaVLy4IAE7CWO3B5_gw0WzjJR-L-0 index.js",
+        "now-start": "micro-bot -d ${NOW_URL} -t 735077022:AAEh7bwaVLy4IAE7CWO3B5_gw0WzjJR-L-0",
+        "deploy-bot": "now --public -e BOT_TOKEN='735077022:AAEh7bwaVLy4IAE7CWO3B5_gw0WzjJR-L-0'"
+    },
+    "author": "Arvind Srinivasan",
+    "license": "ISC",
+    "dependencies": {
+        "micro-bot": "^2.5.1",
+        "telegraf": "^3.25.0"
+    }
+}
