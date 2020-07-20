@@ -4,7 +4,7 @@ const bot = new Composer()
 bot.start((ctx) => {
     ctx.reply("Hello, " + ctx.message.from.first_name + "!\n\n" +
         "I'm Leetomator, an Automator who'll help you speak the language of the Eleet.\n" +
-        "Just type @leetspeak_bot inline, and let me handle the rest.\n\n <i>Shall. We. <b>Begin?</b></i>")
+        "Just type @leetspeak_bot inline, and let me handle the rest.\n\n __Shall. We. Begin?__")
     ctx.replyWithSticker('CAADAgADbAIAApzW5woYlt5rV_hKIgI');
 })
 
